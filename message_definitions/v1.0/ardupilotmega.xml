@@ -1891,21 +1891,32 @@
     </message>
     <message id="11045" name="NMS_STATUS">
       <description>Navigation Management System Status.</description>
-       <field type="uint32_t" name="time_boot_ms" units="ms">Timestamp (time since system boot)</field>
-       <field type="uint8_t" name="active_ekf">Active state stimator filter</field>
-       <field type="uint8_t" name="ekf_src_set">Active EKF source set</field>
-       <field type="uint8_t" name="src_posxy">Active EKF horizontal position source.</field>
-       <field type="uint8_t" name="src_posz">Active EKF vertical position source.</field>
-       <field type="uint8_t" name="src_velxy">Active EKF horizontal velcoity source.</field>
-       <field type="uint8_t" name="src_velz">Active EKF vertical velocity source.</field>
-       <field type="uint8_t" name="src_yaw">Active EKF yaw source.</field>
-       <field type="uint8_t" name="primary_gps">Primary GPS source.</field>
-       <field type="uint8_t" name="nms_state">Navigation Management System state.</field>
-       <field type="uint8_t" name="gps1_state">GPS1 data state.</field>
-       <field type="uint8_t" name="gps1_gta">GPS1 data good to align.</field>
-       <field type="uint8_t" name="gps2_state">GPS2 data state.</field>
-       <field type="uint8_t" name="gps2_gta">GPS2 data good to align.</field>
-       <field type="uint8_t" name="rngfnd_state">Rangefinder data state.</field>
+        <field type="uint32_t" name="time_boot_ms" units="ms">Timestamp (time since system boot)</field>
+        <field type="uint8_t" name="active_ekf">Active state stimator filter</field>
+        <field type="uint8_t" name="ekf_src_set">Active EKF source set</field>
+        <field type="uint8_t" name="src_posxy">Active EKF horizontal position source.</field>
+        <field type="uint8_t" name="src_posz">Active EKF vertical position source.</field>
+        <field type="uint8_t" name="src_velxy">Active EKF horizontal velcoity source.</field>
+        <field type="uint8_t" name="src_velz">Active EKF vertical velocity source.</field>
+        <field type="uint8_t" name="src_yaw">Active EKF yaw source.</field>
+        <field type="uint8_t" name="primary_gps">Primary GPS source.</field>
+        <field type="uint8_t" name="nms_state">Navigation Management System state.</field>
+        <field type="uint8_t" name="gps1_state">GPS1 data state.</field>
+        <field type="uint8_t" name="gps1_gta">GPS1 data good to align.</field>
+        <field type="uint8_t" name="gps2_state">GPS2 data state.</field>
+        <field type="uint8_t" name="gps2_gta">GPS2 data good to align.</field>
+        <field type="uint8_t" name="rngfnd_state">Rangefinder data state.</field>
+    </message>
+    <message id="11046" name="NMS_SENSOR_STATUS">
+      <description>Navigation Management System Status.</description>
+        <field type="uint32_t" name="time_boot_ms" units="ms">Timestamp (time since system boot)</field>
+        <field type="float" name="gps_daxy" units="m/s/s">GPS horizontal acceleration divergence from EKF</field>
+        <field type="float" name="gps_daz" units="m/s/s">GPS vertical acceleration divergence from EKF</field>
+        <field type="float" name="gps_dvxy" units="m/s">GPS horizontal velocity divergence from EKF</field>
+        <field type="float" name="gps_dvz" units="m/s">GPS vertical velocity divergence from EKF</field>
+        <field type="float" name="gps_dpxy" units="m">GPS horizontal position divergence from EKF</field>
+        <field type="float" name="gps_dpz" units="m">GPS vertical position divergence from EKF</field>
+        <field type="float" name="rng_dvz" units="m/s">Rangefinder vertical velocity divergence from EKF</field>
     </message>
   </messages>
 </mavlink>
